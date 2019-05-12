@@ -7,6 +7,9 @@
 <ion-header>
   <ion-navbar>
     <ion-title>Dados pessoais</ion-title>
+    <button class="button-save" icon-only>
+      SALVAR
+    </button>
   </ion-navbar>
 </ion-header>
 
@@ -21,78 +24,91 @@
 
       <div class="profile-image-wrapper" (click)="getPicture()">
         <div class="profile-image-placeholder">
-            <ion-icon name="camera"></ion-icon>
+          <ion-icon name="camera"></ion-icon>
         </div>
-        <!-- <div class="profile-image"></div> -->
+        <!-- <div class="profile-image" name="imagem" [(ngModel)]="user.imagem"></div> -->
       </div>
 
       <ion-row>
-
         <ion-col col-md-12 col-sm-12 col-lg-12>
           <ion-item>
             <ion-label stacked>Nome Completo</ion-label>
-            <ion-input required [(ngModel)]="name"></ion-input>
+            <ion-input disabled name="nome" [(ngModel)]="user.nome"></ion-input>
           </ion-item>
         </ion-col>
+      </ion-row>
 
+      <ion-row>
         <ion-col col-md-12 col-sm-12 col-lg-12>
           <ion-item>
             <ion-label stacked>Email</ion-label>
-            <ion-input required [(ngModel)]="email"></ion-input>
+            <ion-input disabled name="email" [(ngModel)]="user.email"></ion-input>
           </ion-item>
         </ion-col>
+      </ion-row>
 
+      <ion-row>
         <ion-col col-md-6 col-sm-6 col-lg-6>
           <ion-item>
             <ion-label stacked>Nacionalidade</ion-label>
-            <ion-input required [(ngModel)]="name"></ion-input>
+            <ion-input disabled name="nacionalidade" [(ngModel)]="user.nacionalidade"></ion-input>
           </ion-item>
         </ion-col>
 
         <ion-col col-md-6 col-sm-6 col-lg-6>
           <ion-item>
             <ion-label stacked>Estado</ion-label>
-            <ion-input required [(ngModel)]="name"></ion-input>
+            <ion-input disabled name="estado" [(ngModel)]="user.estado"></ion-input>
           </ion-item>
         </ion-col>
+      </ion-row>
 
+      <ion-row>
         <ion-col col-md-4 col-sm-4 col-lg-4>
           <ion-item>
             <ion-label stacked>Escolaridade</ion-label>
-            <ion-input required [(ngModel)]="name"></ion-input>
+            <ion-input disabled name="escolaridade" [(ngModel)]="user.escolaridade"></ion-input>
           </ion-item>
         </ion-col>
 
         <ion-col col-md-4 col-sm-4 col-lg-4>
           <ion-item>
             <ion-label stacked>Situação conjugal</ion-label>
-            <ion-input required [(ngModel)]="name"></ion-input>
+            <ion-input disabled name="estadoCivil" [(ngModel)]="user.estadoCivil"></ion-input>
           </ion-item>
         </ion-col>
 
         <ion-col col-md-4 col-sm-4 col-lg-4>
           <ion-item>
             <ion-label stacked>Frenquenta escola</ion-label>
-            <ion-input required [(ngModel)]="name"></ion-input>
+            <ion-input disabled name="frequentaEscola" [(ngModel)]="user.frequentaEscola"></ion-input>
           </ion-item>
         </ion-col>
+      </ion-row>
 
+      <ion-row>
         <ion-col col-md-12 col-sm-12 col-lg-12>
           <ion-item>
             <ion-label stacked>Nome da mãe</ion-label>
-            <ion-input required [(ngModel)]="email"></ion-input>
+            <ion-input disabled name="nomeMae" [(ngModel)]="user.nomeMae"></ion-input>
           </ion-item>
         </ion-col>
-
+      </ion-row>
+      <ion-row>
         <ion-col col-md-12 col-sm-12 col-lg-12>
           <ion-item>
             <ion-label stacked>Nome da pai</ion-label>
-            <ion-input required [(ngModel)]="email"></ion-input>
+            <ion-input disabled name="nomePai" [(ngModel)]="user.nomePai"></ion-input>
           </ion-item>
         </ion-col>
-
       </ion-row>
 
+      <ion-col col-md-12 col-sm-12 col-lg-12>
+        <ion-item>
+          <ion-label stacked>Nome da pai</ion-label>
+          <ion-input disabled name="data" [(ngModel)]="user.data"></ion-input>
+        </ion-item>
+      </ion-col>
 
     </ion-card-content>
   </ion-card>

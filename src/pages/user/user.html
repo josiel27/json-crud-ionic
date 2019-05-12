@@ -33,18 +33,38 @@
 
       <ion-list>
         <ion-item-sliding *ngFor="let item of currentItems">
-          <button ion-item (click)="detailItem(item)">
-            <ion-avatar item-start>
-              <img [src]="item.profilePic" />
-            </ion-avatar>
-            <h2>{{item.name}}</h2>
-            <p>{{item.about}}</p>
-            <p item-end *ngIf="item.note">{{item.note}}</p>
-            <ion-icon item-end name="more"></ion-icon>
-            <button icon-only [tooltip]="Call" navTooltip>
-                <ion-icon name="call"></ion-icon>
-              </button>
-          </button>
+
+          <ion-row ion-item>
+            <button class="button-list" col-9 (click)="detailItem(item)">
+              <ion-row>
+                <ion-col col-1>
+                  <ion-avatar item-start>
+                    <img [src]="item.imagem" />
+                  </ion-avatar>
+                </ion-col>
+
+
+                <ion-col col-6>
+                  <h2>{{item.nome}}</h2>
+                  <p>{{item.email}}</p>
+                  <p>{{item.nacionalidade}}</p>
+                </ion-col>
+              </ion-row>
+            </button>
+
+            <button col-3>
+              <ion-row>
+                <ion-col col-2>
+                  <p item-end *ngIf="item.data">{{item.data}}</p>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-icon item-end name="more" class="more-position"></ion-icon>
+              </ion-row>
+            </button>
+
+          </ion-row>
+
         </ion-item-sliding>
       </ion-list>
 

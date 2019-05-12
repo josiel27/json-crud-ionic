@@ -7,101 +7,113 @@ export class Items {
   items: Item[] = [];
 
   defaultItem: any = {
-    "name": "Alice Lime",
-    "profilePic": "assets/imgs/pessoas/f1.jpg",
-    "about": "Americana",
+    "nome": "Alice Lime",
+    "imagem": "assets/imgs/pessoas/f1.jpg",
+    "nacionalidade": "Americana",
+    "email": "arlindo@gmail.com",
+    "estado": "df",
+    "escolaridade": "superior",
+    "estadoCivil": "solteiro",
+    "frequentaEscola": "sim",
+    "nomeMae": "Fernanda Mendez",
+    "nomePai": "Paulo Alberto Neto",
+    "data": "25/03/2019"
   };
 
 
   constructor() {
     let items = [
       {
-        "name": "Arlindo Neto",
-        "profilePic": "assets/imgs/pessoas/m1.jpg",
-        "about": "Brasileira",
-        "note": "25/03/2019"
+        "nome": "Arlindo Neto",
+        "imagem": "assets/imgs/pessoas/m1.jpg",
+        "nacionalidade": "Brasileira",
+        "email": "arlindo@gmail.com",
+        "estado": "df",
+        "escolaridade": "superior",
+        "estadoCivil": "solteiro",
+        "frequentaEscola": "sim",
+        "nomeMae": "Fernanda Mendez",
+        "nomePai": "Paulo Alberto Neto",
+        "data": "25/03/2019"
       },
       {
-        "name": "Filipe Gonçalves",
-        "profilePic": "assets/imgs/pessoas/m2.jpg",
-        "about": "Brasileira",
-        "note": "25/03/2019"
-      },
-     
-      {
-        "name": "Rodolfo Merlin",
-        "profilePic": "assets/imgs/pessoas/m3.jpg",
-        "about": "Brasileira",
-        "note": "25/03/2019"
-      },
-      {
-        "name": "Eva Mary",
-        "profilePic": "assets/imgs/pessoas/f2.jpg",
-        "about": "Americana",
-        "note": "25/03/2019"
-      },
-      {
-        "name": "Lucinalva Alves",
-        "profilePic": "assets/imgs/pessoas/f3.jpg",
-        "about": "Brasileira",
-        "note": "25/03/2019"
-      },
-      {
-        "name": "Gabriela de Melo",
-        "profilePic": "assets/imgs/pessoas/f4.jpg",
-        "about": "Brasileira",
-        "note": "25/03/2019"
-      },
-      {
-        "name": "Paulo Fagundez",
-        "profilePic": "assets/imgs/pessoas/m4.jpg",
-        "about": "Cubano",
-        "note": "25/03/2019"
+        "nome": "Filipe Gonçalves",
+        "imagem": "assets/imgs/pessoas/m2.jpg",
+        "nacionalidade": "Brasileira",
+        "email": "arlindo@gmail.com",
+        "estado": "df",
+        "escolaridade": "superior",
+        "estadoCivil": "solteiro",
+        "frequentaEscola": "sim",
+        "nomeMae": "Fernanda Mendez",
+        "nomePai": "Paulo Alberto Neto",
+        "data": "25/03/2019"
       },
 
-
       {
-        "name": "Arlindo Neto",
-        "profilePic": "assets/imgs/pessoas/m1.jpg",
-        "about": "Brasileira",
-        "note": "25/03/2019"
+        "nome": "Rodolfo Merlin",
+        "imagem": "assets/imgs/pessoas/m3.jpg",
+        "nacionalidade": "Brasileira",
+        "email": "arlindo@gmail.com",
+        "estado": "df",
+        "escolaridade": "superior",
+        "estadoCivil": "solteiro",
+        "frequentaEscola": "sim",
+        "nomeMae": "Fernanda Mendez",
+        "nomePai": "Paulo Alberto Neto",
+        "data": "25/03/2019"
       },
       {
-        "name": "Filipe Gonçalves",
-        "profilePic": "assets/imgs/pessoas/m2.jpg",
-        "about": "Brasileira",
-        "note": "25/03/2019"
-      },
-     
-      {
-        "name": "Rodolfo Merlin",
-        "profilePic": "assets/imgs/pessoas/m3.jpg",
-        "about": "Brasileira",
-        "note": "25/03/2019"
-      },
-      {
-        "name": "Eva Mary",
-        "profilePic": "assets/imgs/pessoas/f2.jpg",
-        "about": "Americana",
-        "note": "25/03/2019"
+        "nome": "Eva Mary",
+        "imagem": "assets/imgs/pessoas/f2.jpg",
+        "nacionalidade": "Americana",
+        "email": "arlindo@gmail.com",
+        "estado": "df",
+        "escolaridade": "superior",
+        "estadoCivil": "solteiro",
+        "frequentaEscola": "sim",
+        "nomeMae": "Fernanda Mendez",
+        "nomePai": "Paulo Alberto Neto",
+        "data": "25/03/2019"
       },
       {
-        "name": "Lucinalva Alves",
-        "profilePic": "assets/imgs/pessoas/f3.jpg",
-        "about": "Brasileira",
-        "note": "25/03/2019"
+        "nome": "Lucinalva Alves",
+        "imagem": "assets/imgs/pessoas/f3.jpg",
+        "nacionalidade": "Brasileira",
+        "email": "arlindo@gmail.com",
+        "estado": "df",
+        "escolaridade": "superior",
+        "estadoCivil": "solteiro",
+        "frequentaEscola": "sim",
+        "nomeMae": "Fernanda Mendez",
+        "nomePai": "Paulo Alberto Neto",
+        "data": "25/03/2019"
       },
       {
-        "name": "Gabriela de Melo",
-        "profilePic": "assets/imgs/pessoas/f4.jpg",
-        "about": "Brasileira",
-        "note": "25/03/2019"
+        "nome": "Gabriela de Melo",
+        "imagem": "assets/imgs/pessoas/f4.jpg",
+        "nacionalidade": "Brasileira",
+        "email": "arlindo@gmail.com",
+        "estado": "df",
+        "escolaridade": "superior",
+        "estadoCivil": "solteiro",
+        "frequentaEscola": "sim",
+        "nomeMae": "Fernanda Mendez",
+        "nomePai": "Paulo Alberto Neto",
+        "data": "25/03/2019"
       },
       {
-        "name": "Paulo Fagundez",
-        "profilePic": "assets/imgs/pessoas/m4.jpg",
-        "about": "Cubano",
-        "note": "25/03/2019"
+        "nome": "Paulo Fagundez",
+        "imagem": "assets/imgs/pessoas/m4.jpg",
+        "nacionalidade": "Cubano",
+        "email": "arlindo@gmail.com",
+        "estado": "df",
+        "escolaridade": "superior",
+        "estadoCivil": "solteiro",
+        "frequentaEscola": "sim",
+        "nomeMae": "Fernanda Mendez",
+        "nomePai": "Paulo Alberto Neto",
+        "data": "25/03/2019"
       }
     ];
 

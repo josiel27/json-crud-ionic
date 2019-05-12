@@ -33,8 +33,18 @@ page-user {
     right: 50px;
     top: 108px;
   }
+  
   .color-fab {
     background: #d64747;
+  }
+
+  //alinha a posição da opcao more a direita
+  .more-position{
+    right: 40px;
+    position: fixed;
+  }
+  .button-list{
+    background-color: aliceblue;
   }
 
   //ajuster na divisão dos usuário na lista

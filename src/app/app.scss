@@ -40,6 +40,16 @@ ion-card {
   margin-top: 0px !important;
 }
 
+/**  Ajuste da largura e posicionamento dos cards caso o tamanho do dispositivo for menor que 800px **/
+@media only screen and (max-width: 800px) {
+  ion-card {
+    max-width: 100% !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    margin-top: 0px !important;
+  }
+}
+
 // Botão de voltar
 .back-button {
   color: white !important;
