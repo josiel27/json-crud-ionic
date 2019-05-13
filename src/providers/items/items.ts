@@ -115,6 +115,93 @@ export class Items {
         "nomePai": "Paulo Alberto Neto",
         "data": "25/03/2019"
       }
+
+
+
+
+
+
+,
+      {
+        "nome": "Eva Faria",
+        "imagem": "assets/imgs/pessoas/f2.jpg",
+        "nacionalidade": "Americana",
+        "email": "arlindo@gmail.com",
+        "estado": "df",
+        "escolaridade": "superior",
+        "estadoCivil": "solteiro",
+        "frequentaEscola": "sim",
+        "nomeMae": "Fernanda Mendez",
+        "nomePai": "Paulo Alberto Neto",
+        "data": "25/03/2019"
+      },
+
+      {
+        "nome": "Paulo Fagundez",
+        "imagem": "assets/imgs/pessoas/m4.jpg",
+        "nacionalidade": "Cubano",
+        "email": "arlindo@gmail.com",
+        "estado": "df",
+        "escolaridade": "superior",
+        "estadoCivil": "solteiro",
+        "frequentaEscola": "sim",
+        "nomeMae": "Fernanda Mendez",
+        "nomePai": "Paulo Alberto Neto",
+        "data": "25/03/2019"
+      }     ,
+      {
+        "nome": "Lucinalva Alves",
+        "imagem": "assets/imgs/pessoas/f3.jpg",
+        "nacionalidade": "Brasileira",
+        "email": "arlindo@gmail.com",
+        "estado": "df",
+        "escolaridade": "superior",
+        "estadoCivil": "solteiro",
+        "frequentaEscola": "sim",
+        "nomeMae": "Fernanda Mendez",
+        "nomePai": "Paulo Alberto Neto",
+        "data": "25/03/2019"
+      },
+      {
+        "nome": "Gabriela de Melo",
+        "imagem": "assets/imgs/pessoas/f4.jpg",
+        "nacionalidade": "Brasileira",
+        "email": "arlindo@gmail.com",
+        "estado": "df",
+        "escolaridade": "superior",
+        "estadoCivil": "solteiro",
+        "frequentaEscola": "sim",
+        "nomeMae": "Fernanda Mendez",
+        "nomePai": "Paulo Alberto Neto",
+        "data": "25/03/2019"
+      },
+      {
+        "nome": "Paulo Fagundez",
+        "imagem": "assets/imgs/pessoas/m4.jpg",
+        "nacionalidade": "Cubano",
+        "email": "arlindo@gmail.com",
+        "estado": "df",
+        "escolaridade": "superior",
+        "estadoCivil": "solteiro",
+        "frequentaEscola": "sim",
+        "nomeMae": "Fernanda Mendez",
+        "nomePai": "Paulo Alberto Neto",
+        "data": "25/03/2019"
+      }
+      ,
+      {
+        "nome": "Paulo Fagundez",
+        "imagem": "assets/imgs/pessoas/m4.jpg",
+        "nacionalidade": "Cubano",
+        "email": "arlindo@gmail.com",
+        "estado": "df",
+        "escolaridade": "superior",
+        "estadoCivil": "solteiro",
+        "frequentaEscola": "sim",
+        "nomeMae": "Fernanda Mendez",
+        "nomePai": "Paulo Alberto Neto",
+        "data": "25/03/2019"
+      }
     ];
 
     for (let item of items) {
@@ -124,7 +211,8 @@ export class Items {
 
   query(params?: any) {
     if (!params) {
-      return this.items;
+      let prop = "nome"; //filtro por nome
+      return this.items.sort((a, b) => a[prop] > b[prop] ? 1 : a[prop] === b[prop] ? 0 : -1); //order by para o array
     }
 
     return this.items.filter((item) => {
@@ -141,10 +229,12 @@ export class Items {
   }
 
   add(item: Item) {
-    this.items.push(item);
+    this.items.push(new Item(item));
+    return this.items;
   }
 
   delete(item: Item) {
     this.items.splice(this.items.indexOf(item), 1);
   }
+  
 }

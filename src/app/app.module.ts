@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { UserPageModule } from '../pages/user/user.module';
 import { NewUserPageModule } from '../pages/new-user/new-user.module';
 import { EditUserPageModule } from '../pages/edit-user/edit-user.module';
+import { DetailUserPageModule } from '../pages/detail-user/detail-user.module';
 import { Items } from '../providers/items/items';
 
 @NgModule({
@@ -20,6 +21,7 @@ import { Items } from '../providers/items/items';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     UserPageModule,
+    DetailUserPageModule,
     NewUserPageModule,
     EditUserPageModule
   ],
