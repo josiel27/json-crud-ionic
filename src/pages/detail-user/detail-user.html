@@ -7,7 +7,7 @@
 <ion-header>
   <ion-navbar>
     <ion-buttons left>
-      <button ion-button icon-only  (click)="backUserPage()">
+      <button ion-button icon-only (click)="backUserPage()">
         <ion-icon name="arrow-back"></ion-icon>
       </button>
     </ion-buttons>
@@ -28,11 +28,14 @@
 
     <ion-card-content>
 
+      <input type="file" #fileInput style="visibility: hidden; height: 0px" name="files[]"
+        (change)="processWebImage($event)" />
       <div class="profile-image-wrapper" (click)="getPicture()">
-        <div class="profile-image-placeholder">
+        <div class="profile-image-placeholder" *ngIf="!user.imagem">
           <ion-icon name="camera"></ion-icon>
         </div>
-        <!-- <div class="profile-image" name="imagem" [(ngModel)]="user.imagem"></div> -->
+        <div class="profile-image" name="imagem" [style.backgroundImage]="getProfileImageStyle()" *ngIf="user.imagem">
+        </div>
       </div>
 
       <ion-row>
@@ -48,7 +51,7 @@
         <ion-col col-md-12 col-sm-12 col-lg-12>
           <ion-item>
             <ion-label stacked>Email</ion-label>
-            <ion-input required name="email" [(ngModel)]="user.email"></ion-input>
+            <ion-input required type="email" name="email" [(ngModel)]="user.email"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -57,14 +60,80 @@
         <ion-col col-md-6 col-sm-6 col-lg-6>
           <ion-item>
             <ion-label stacked>Nacionalidade</ion-label>
-            <ion-input required name="nacionalidade" [(ngModel)]="user.nacionalidade"></ion-input>
+            <ion-select class="ionselect" required name="nacionalidade" [(ngModel)]="user.nacionalidade" interface="popover">
+              <ion-option value="afegao">Afegão</ion-option>
+              <ion-option value="africano">Africano</ion-option>
+              <ion-option value="alemao">Alemão</ion-option>
+              <ion-option value="americano">Americano</ion-option>
+              <ion-option value="argentino">Argentino</ion-option>
+              <ion-option value="asiatico">Asiático</ion-option>
+              <ion-option value="auistraliano">Australiano</ion-option>
+              <ion-option value="austrico">Austríaco</ion-option>
+              <ion-option value="belga">Belga</ion-option>
+              <ion-option value="brasileiro" >Brasileiro</ion-option>
+              <ion-option value="britanico">Britânico</ion-option>
+              <ion-option value="chileno">Chileno</ion-option>
+              <ion-option value="chines">Chinês</ion-option>
+              <ion-option value="colombiano">Colombiano</ion-option>
+              <ion-option value="dinarmaques">Dinamarquês</ion-option>
+              <ion-option value="egipicio">Egípcio</ion-option>
+              <ion-option value="escoces">Escocês</ion-option>
+              <ion-option value="eslovaco">Eslovaco</ion-option>
+              <ion-option value="espanhol">Espanhol</ion-option>
+              <ion-option value="europeu">Europeu</ion-option>
+              <ion-option value="finlandes">Finlandês</ion-option>
+              <ion-option value="francesa">Francesa</ion-option>
+              <ion-option value="frances">Francês</ion-option>
+              <ion-option value="grego">Grego</ion-option>
+              <ion-option value="holandes">Holandês</ion-option>
+              <ion-option value="indiano">Indiano</ion-option>
+              <ion-option value="ingles">Inglês</ion-option>
+              <ion-option value="italiano">Italiano</ion-option>
+              <ion-option value="japones">Japonês</ion-option>
+              <ion-option value="mexicano">Mexicano</ion-option>
+              <ion-option value="polones">Polonês</ion-option>
+              <ion-option value="portugues">Português</ion-option>
+              <ion-option value="russo">Russo</ion-option>
+              <ion-option value="sueco">Sueco</ion-option>
+              <ion-option value="sulafricano">Sul-Africano</ion-option>
+              <ion-option value="sulacoreano">Sul-Coreano</ion-option>
+              <ion-option value="arabe">Árabe</ion-option>
+            </ion-select>
           </ion-item>
         </ion-col>
 
         <ion-col col-md-6 col-sm-6 col-lg-6>
-          <ion-item>
+          <ion-item class="select-size">
             <ion-label stacked>Estado</ion-label>
-            <ion-input required name="estado" [(ngModel)]="user.estado"></ion-input>
+            <ion-select class="ionselect" required name="estado" [(ngModel)]="user.estado" interface="popover">
+              <ion-option value="AC">Acre</ion-option>
+              <ion-option value="AL">Alagoas</ion-option>
+              <ion-option value="AP">Amapá</ion-option>
+              <ion-option value="AM">Amazonas</ion-option>
+              <ion-option value="BA">Bahia</ion-option>
+              <ion-option value="CE">Ceará</ion-option>
+              <ion-option value="DF" selected>Distrito Federal</ion-option>
+              <ion-option value="ES">Espirito Santo</ion-option>
+              <ion-option value="GO">Goiás</ion-option>
+              <ion-option value="MA">Maranhão</ion-option>
+              <ion-option value="MT">Mato Grosso</ion-option>
+              <ion-option value="MS">Mato Grosso do Sul</ion-option>
+              <ion-option value="MG">Minas Gerais</ion-option>
+              <ion-option value="PA">Pará</ion-option>
+              <ion-option value="PB">Paraíba</ion-option>
+              <ion-option value="PR">Paraná</ion-option>
+              <ion-option value="PE">Pernambuco</ion-option>
+              <ion-option value="PI">Piauí</ion-option>
+              <ion-option value="RJ">Rio de Janeiro</ion-option>
+              <ion-option value="RN">Rio Grande do Norte</ion-option>
+              <ion-option value="RS">Rio Grande do Sul</ion-option>
+              <ion-option value="RO">Rondônia</ion-option>
+              <ion-option value="RR">Roraima</ion-option>
+              <ion-option value="SC">Santa Catarina</ion-option>
+              <ion-option value="SP">São Paulo</ion-option>
+              <ion-option value="SE">Sergipe</ion-option>
+              <ion-option value="TO">Tocantis</ion-option>
+            </ion-select>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -73,21 +142,34 @@
         <ion-col col-md-4 col-sm-4 col-lg-4>
           <ion-item>
             <ion-label stacked>Escolaridade</ion-label>
-            <ion-input required name="escolaridade" [(ngModel)]="user.escolaridade"></ion-input>
+            <ion-select class="ionselect"required name="escolaridade" [(ngModel)]="user.escolaridade" interface="popover">
+              <ion-option value="fundamental">Fundamental</ion-option>
+              <ion-option value="medio">Médio</ion-option>
+              <ion-option value="superior">Superior</ion-option>
+              <ion-option value="posgraduacao">Pós-graduação</ion-option>
+            </ion-select>
           </ion-item>
         </ion-col>
 
         <ion-col col-md-4 col-sm-4 col-lg-4>
           <ion-item>
             <ion-label stacked>Situação conjugal</ion-label>
-            <ion-input required name="estadoCivil" [(ngModel)]="user.estadoCivil"></ion-input>
+            <ion-select class="ionselect" required name="estadoCivil" [(ngModel)]="user.estadoCivil" interface="popover">
+              <ion-option value="solteiro">Solteiro(a)</ion-option>
+              <ion-option value="casado">Casado(a)</ion-option>
+              <ion-option value="viuvo">Viúvo(a)</ion-option>
+              <ion-option value="divorciado">Divorciado(a)</ion-option>
+            </ion-select>
           </ion-item>
         </ion-col>
 
         <ion-col col-md-4 col-sm-4 col-lg-4>
           <ion-item>
-            <ion-label stacked>Frenquenta escola</ion-label>
-            <ion-input required name="frequentaEscola" [(ngModel)]="user.frequentaEscola"></ion-input>
+            <ion-label  stacked>Frenquenta escola</ion-label>
+            <ion-select class="ionselect" required name="frequentaEscola" [(ngModel)]="user.frequentaEscola" interface="popover">
+                <ion-option value="sim">Sim</ion-option>
+                <ion-option value="nao">Não</ion-option>
+              </ion-select>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -109,12 +191,12 @@
         </ion-col>
       </ion-row>
 
-      <ion-col col-md-12 col-sm-12 col-lg-12>
+      <!-- <ion-col col-md-12 col-sm-12 col-lg-12>
         <ion-item>
-          <ion-label stacked>Nome da pai</ion-label>
-          <ion-input required name="data" [(ngModel)]="user.data"></ion-input>
+          <ion-label stacked>Data</ion-label>
+          <ion-input disabled name="data" [(ngModel)]="user.data"></ion-input>
         </ion-item>
-      </ion-col>
+      </ion-col> -->
 
     </ion-card-content>
   </ion-card>

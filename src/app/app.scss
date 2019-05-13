@@ -55,3 +55,33 @@ ion-card {
 .toolbar-title, p, h2, h6, .text-input, ion-label, button{
   font-family: $font-system !important;
 }
+
+.ionselect {
+  width: 200px;
+}
+
+
+/** Propiedades do alert **/
+.alert-md {
+  
+  .alert-wrapper {
+    max-width: 600px!important;
+    width: 600px!important;
+  }
+  .alert-button {
+    color: #009688 !important;
+  }
+  .alert-message {
+    overflow: hidden;
+  }
+  .alert-title, .alert-message, .alert-inner{
+    font-family: $font-system !important;
+  }
+}
+
+.toast_class {
+  font-family: $font-system;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 20px;
+}

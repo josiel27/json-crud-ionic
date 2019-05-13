@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
+import { Camera } from '@ionic-native/camera';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -7,8 +8,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { UserPageModule } from '../pages/user/user.module';
-import { NewUserPageModule } from '../pages/new-user/new-user.module';
-import { EditUserPageModule } from '../pages/edit-user/edit-user.module';
 import { DetailUserPageModule } from '../pages/detail-user/detail-user.module';
 import { Items } from '../providers/items/items';
 
@@ -21,9 +20,7 @@ import { Items } from '../providers/items/items';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     UserPageModule,
-    DetailUserPageModule,
-    NewUserPageModule,
-    EditUserPageModule
+    DetailUserPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -33,6 +30,7 @@ import { Items } from '../providers/items/items';
   providers: [
     StatusBar,
     SplashScreen,
+    Camera,
     Items,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]

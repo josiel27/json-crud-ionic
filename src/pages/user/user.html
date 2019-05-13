@@ -17,13 +17,12 @@
 
   <ion-card>
     <div class="div-menu"> </div>
-    <button class="tooltip">INTERV
-
-    </button>
     <ion-card-header>
       <ion-row>
 
-        <h2 col-4 class="margin-auto">Usuários Cadastrados</h2>
+        <div class="margin-auto">
+          <h2 col-4 class="margin-title">Usuários Cadastrados</h2>
+        </div>
         <ion-searchbar *ngIf="trueSearch" col-6 (ionInput)="search($event)"></ion-searchbar>
         <button *ngIf="!trueSearch" class="button-search" (click)="searchOpen()">
           <ion-icon class="icon-search" name="search" item-end></ion-icon>
@@ -35,9 +34,12 @@
     <ion-card-content>
 
       <ion-list>
-        <ion-item-sliding *ngFor="let item of currentItems ">
+        <ion-item-group *ngFor="let item of currentItems">
 
-          <ion-row ion-item>
+          <ion-row ion-item >
+            <div>
+              {{item.group}}
+            </div>
 
             <button col-10 class="button-list" col-9 (click)="detailItem(item)">
               <ion-row>
@@ -55,9 +57,9 @@
               </ion-row>
             </button>
 
-            <button col-2 class="button-list position-fixed tooltip" >
+            <button col-2 class="button-list position-fixed tooltip">
               <div class="tooltiptext">
-                  <div class="tooltiptext" (click)="deleteItem(item)" class="button-delete" >Excluir Registro</div>
+                <div class="tooltiptext" (click)="deleteItem(item)" class="button-delete">Excluir Registro</div>
               </div>
               <ion-row>
                 <p item-end *ngIf="item.data" class="data-position">{{item.data}}</p>
@@ -68,8 +70,7 @@
             </button>
 
           </ion-row>
-
-        </ion-item-sliding>
+        </ion-item-group>
       </ion-list>
 
     </ion-card-content>

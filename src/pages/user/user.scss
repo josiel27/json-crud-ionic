@@ -50,17 +50,6 @@ page-user {
     background-color: white;
   }
 
-  .alert-button {
-    color: #009688 !important;
-  }
-  .as {
-    background-color: red;
-    color: #009688 !important;
-    button {
-      color: #009688 !important;
-    }
-  }
-
   .position-fixed {
     position: fixed;
   }
@@ -79,29 +68,42 @@ page-user {
   }
 
   .div-menu {
-    height: 121px;
+    height: 80px;
     position: absolute;
     width: 100%;
     background: $menu;
-    margin-left: -16px !important;
+    /* margin-left: -16px !important; */
+    left: 0px;
     z-index: -1;
   }
 
   .button-search {
     background: transparent;
-    width: 351px;
+    width: 50%;
   }
 
   .icon-search {
     position: relative;
-    left: 156px;
+    left: 45%;
     font-size: 20px;
   }
 
   .margin-auto {
-    margin: auto;
+    width: 50%;
     margin-top: 16px !important;
   }
+  .margin-title {
+    margin-left: 40px;
+  }
+}
+
+.item-md ion-avatar ion-img,
+.item-md ion-avatar img {
+  margin: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 55px;
+  height: 55px;
 }
 
 .tooltiptext {

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { DetailUserPage } from './detail-user';
-
 @NgModule({
   declarations: [
     DetailUserPage,
@@ -10,4 +9,4 @@ import { DetailUserPage } from './detail-user';
     IonicPageModule.forChild(DetailUserPage),
   ],
 })
-export class DetailUserPageModule {}
+export class DetailUserPageModule { }
