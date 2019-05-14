@@ -25,5 +25,5 @@ ionic serve
 
 
 Acesse o projeto no seguinte endereço: 
-[src/pages/index.ts](https://josiel27.github.io/maisvida/docs/).
+[Executar o projeto](https://josiel27.github.io/maisvida/docs/).
 
