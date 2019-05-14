@@ -25,5 +25,5 @@ ionic serve
 
 
 Acesse o projeto no seguinte endereço: 
-[src/pages/index.ts](https://github.com/ionic-team/starters/blob/master/ionic-angular/official/super/src/pages/index.ts).
+[src/pages/index.ts](https://josiel27.github.io/maisvida/docs/).
 
