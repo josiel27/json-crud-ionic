@@ -24,7 +24,6 @@ export class DetailUserPage {
   public getParamsUser: any = {};
   public newUser: any = false;
 
-
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -33,16 +32,12 @@ export class DetailUserPage {
     public itemsProvider: Items
 
   ) {
-
-
     this.getParamsUser = this.navParams.get('item'); //recebe os parametros da page user
     this.newUser = this.navParams.get('newUser'); //recebe o parametro para saber se o sera um novo usuario, ou a alteracao de uma
 
     //se possuir parametros, ele os adiciona ao ngModel
     if (this.getParamsUser)
       this.user = this.getParamsUser;
-
-    console.log(this.user)
   }
 
   saveUser(user: Item) {
@@ -50,6 +45,7 @@ export class DetailUserPage {
     (this.newUser) ? this.addUser(user) : this.editUser(user);
   }
 
+  //teste de campos vazios e chamado da funcao de adicionar usuario
   addUser(user: Item) {
     if (!user.nome || !user.email) { //verifica se esses campos estão vazios
       this.showAlert('Prencha pelo menos os campos de Nome e E-mail.');
@@ -59,6 +55,7 @@ export class DetailUserPage {
     }
   }
 
+  //chamada funcao de editar usuario
   editUser(user: Item) {
     this.itemsProvider.update(user);
     this.backUserPage();
@@ -101,6 +98,26 @@ export class DetailUserPage {
     this.navCtrl.setRoot(UserPage);
   }
 
+  /** Permitir apenas letras no input de nome */
+  justLetters(e, evt: KeyboardEvent) {
+    try {
+      if (evt) {
+        var charCode = evt.keyCode;
+      } else if (e) {
+        charCode = e.which;
+      } else {
+        return true;
+      }
+      if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123))
+        return true;
+      else
+        return false;
+    } catch (err) {
+      alert(err.Description);
+    }
+  }
+
+  /** Mostrar messagem de alerta */
   showAlert(msg) {
     const alert = this.alertController.create({
       title: msg,
@@ -117,4 +134,5 @@ export class DetailUserPage {
     });
     alert.present();
   }
+
 }

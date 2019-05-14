@@ -29,7 +29,7 @@ export class Items {
       {
         "cod": "1",
         "nome": "Arlindo Neto",
-        "imagem": "assets/imgs/pessoas/m1.jpg",
+        "imagem": "assets/imgs/pessoas/m5.jpg",
         "nacionalidade": "brasileiro",
         "email": "arlindo@gmail.com",
         "estado": "DF",
@@ -38,34 +38,20 @@ export class Items {
         "frequentaEscola": "sim",
         "nomeMae": "Fernanda Mendez",
         "nomePai": "Paulo Alberto Neto",
-        "data": "25/03/2019"
-      },
-      {
-        "cod": "1",
-        "nome": "Alberto Neves",
-        "imagem": "assets/imgs/pessoas/m1.jpg",
-        "nacionalidade": "brasileiro",
-        "email": "arlindo@gmail.com",
-        "estado": "DF",
-        "escolaridade": "superior",
-        "estadoCivil": "solteiro",
-        "frequentaEscola": "sim",
-        "nomeMae": "Fernanda Mendez",
-        "nomePai": "Paulo Alberto Neto",
-        "data": "25/03/2019"
+        "data": "24/03/2019"
       },
       {
         "cod": "2",
         "nome": "Filipe Gonçalves",
-        "imagem": "assets/imgs/pessoas/m2.jpg",
+        "imagem": "assets/imgs/pessoas/default.png",
         "nacionalidade": "brasileiro",
-        "email": "arlindo@gmail.com",
+        "email": "filipe@gmail.com",
         "estado": "DF",
-        "escolaridade": "superior",
+        "escolaridade": "medio",
         "estadoCivil": "solteiro",
-        "frequentaEscola": "sim",
-        "nomeMae": "Fernanda Mendez",
-        "nomePai": "Paulo Alberto Neto",
+        "frequentaEscola": "nao",
+        "nomeMae": "Paula Mendez",
+        "nomePai": "Rafael Junior",
         "data": "25/03/2019"
       },
       {
@@ -73,71 +59,113 @@ export class Items {
         "nome": "Rodolfo Merlin",
         "imagem": "assets/imgs/pessoas/m3.jpg",
         "nacionalidade": "brasileiro",
-        "email": "arlindo@gmail.com",
+        "email": "rodolfo@gmail.com",
         "estado": "DF",
         "escolaridade": "superior",
-        "estadoCivil": "solteiro",
-        "frequentaEscola": "sim",
-        "nomeMae": "Fernanda Mendez",
-        "nomePai": "Paulo Alberto Neto",
-        "data": "25/03/2019"
+        "estadoCivil": "casado",
+        "frequentaEscola": "nao",
+        "nomeMae": "Lorena Feitosa",
+        "nomePai": "João Gabriel",
+        "data": "26/03/2019"
       },
       {
         "cod": "4",
         "nome": "Eva Mary",
         "imagem": "assets/imgs/pessoas/f2.jpg",
         "nacionalidade": "americano",
-        "email": "arlindo@gmail.com",
-        "estado": "DF",
+        "email": "evinha@gmail.com",
+        "estado": "RS",
         "escolaridade": "superior",
         "estadoCivil": "solteiro",
         "frequentaEscola": "sim",
-        "nomeMae": "Fernanda Mendez",
-        "nomePai": "Paulo Alberto Neto",
-        "data": "25/03/2019"
+        "nomeMae": "Rinalva Alves",
+        "nomePai": "Jhon Liro",
+        "data": "27/03/2019"
       },
       {
         "cod": "5",
         "nome": "Lucinalva Alves",
         "imagem": "assets/imgs/pessoas/f3.jpg",
         "nacionalidade": "brasileiro",
-        "email": "arlindo@gmail.com",
+        "email": "lucinha@gmail.com",
         "estado": "DF",
         "escolaridade": "superior",
         "estadoCivil": "solteiro",
         "frequentaEscola": "sim",
-        "nomeMae": "Fernanda Mendez",
-        "nomePai": "Paulo Alberto Neto",
-        "data": "25/03/2019"
+        "nomeMae": "Maria Oliveira",
+        "nomePai": "Matheus Melo",
+        "data": "28/03/2019"
       },
       {
         "cod": "6",
         "nome": "Gabriela de Melo",
-        "imagem": "assets/imgs/pessoas/f4.jpg",
+        "imagem": "assets/imgs/pessoas/f1.jpg",
         "nacionalidade": "brasileiro",
-        "email": "arlindo@gmail.com",
+        "email": "gabimelo@gmail.com",
         "estado": "DF",
         "escolaridade": "superior",
         "estadoCivil": "solteiro",
         "frequentaEscola": "sim",
         "nomeMae": "Fernanda Mendez",
         "nomePai": "Paulo Alberto Neto",
-        "data": "25/03/2019"
+        "data": "29/03/2019"
       },
       {
         "cod": "7",
         "nome": "Paulo Fagundez",
         "imagem": "assets/imgs/pessoas/m4.jpg",
         "nacionalidade": "Cubano",
-        "email": "arlindo@gmail.com",
+        "email": "paufadez@gmail.com",
         "estado": "DF",
         "escolaridade": "superior",
         "estadoCivil": "solteiro",
         "frequentaEscola": "sim",
-        "nomeMae": "Fernanda Mendez",
-        "nomePai": "Paulo Alberto Neto",
+        "nomeMae": "Sandra Faria",
+        "nomePai": "Otavio Paulo",
+        "data": "28/03/2019"
+      },
+      {
+        "cod": "8",
+        "nome": "Lorrana Gonçalvez",
+        "imagem": "assets/imgs/pessoas/f5.jpg",
+        "nacionalidade": "brasileiro",
+        "email": "lorrana50@gmail.com",
+        "estado": "DF",
+        "escolaridade": "superior",
+        "estadoCivil": "solteiro",
+        "frequentaEscola": "sim",
+        "nomeMae": "Polyana Mendez",
+        "nomePai": "Filipe Gustavo",
+        "data": "27/03/2019"
+      },
+      {
+        "cod": "9",
+        "nome": "Afonso Mesquita",
+        "imagem": "assets/imgs/pessoas/m1.jpg",
+        "nacionalidade": "brasileiro",
+        "email": "afonso10@gmail.com",
+        "estado": "DF",
+        "escolaridade": "superior",
+        "estadoCivil": "solteiro",
+        "frequentaEscola": "sim",
+        "nomeMae": "Lorrana Xavier",
+        "nomePai": "Domingos Saraiva",
+        "data": "26/03/2019"
+      },
+      {
+        "cod": "10",
+        "nome": "Fábio Rinaldo",
+        "imagem": "assets/imgs/pessoas/m6.jpg",
+        "nacionalidade": "brasileiro",
+        "email": "fabio01@gmail.com",
+        "estado": "DF",
+        "escolaridade": "superior",
+        "estadoCivil": "solteiro",
+        "frequentaEscola": "sim",
+        "nomeMae": "Paola Alves",
+        "nomePai": "Thiago Xavier",
         "data": "25/03/2019"
-      }
+      },
 
     ];
 
@@ -149,7 +177,7 @@ export class Items {
   query(params?: any) {
     if (!params) {
       let prop = "nome"; //filtro por nome
-      return this.items.sort((a, b) => a[prop] > b[prop] ? 1 : a[prop] === b[prop] ? 0 : -1); //order by para o array
+      return this.items.sort((a, b) => a[prop].toLowerCase() > b[prop].toLowerCase() ? 1 : a[prop].toLowerCase() === b[prop].toLowerCase() ? 0 : -1); //order by para o array
     }
 
     return this.items.filter((item) => {

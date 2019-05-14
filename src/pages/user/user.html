@@ -23,7 +23,7 @@
         <div class="margin-auto">
           <h2 col-4 class="margin-title">Usuários Cadastrados</h2>
         </div>
-        <ion-searchbar *ngIf="trueSearch" col-6 (ionInput)="search($event)"></ion-searchbar>
+        <ion-searchbar *ngIf="trueSearch" col-6 (close)="test($event)" (ionInput)="search($event)"></ion-searchbar>
         <button *ngIf="!trueSearch" class="button-search" (click)="searchOpen()">
           <ion-icon class="icon-search" name="search" item-end></ion-icon>
         </button>
@@ -36,36 +36,36 @@
       <ion-list>
         <ion-item-group *ngFor="let item of currentItems">
 
-          <ion-row ion-item >
-            <div>
-              {{item.group}}
-            </div>
+          <ion-row ion-item>
+            <button class="button-list cursor-default button-group-size" col-1>
+              <h2 class="group-size">{{item.group}}</h2>
+            </button>
 
-            <button col-10 class="button-list" col-9 (click)="detailItem(item)">
+            <button class="button-list" col-1  (click)="detailItem(item)">
+              <ion-avatar>
+                <img [src]="item.imagem" />
+              </ion-avatar>
+            </button>
+
+            <button class="button-list border-item-bottom tooltip" col-10>
               <ion-row>
-                <ion-col col-2>
-                  <ion-avatar>
-                    <img [src]="item.imagem" />
-                  </ion-avatar>
-                </ion-col>
-
-                <ion-col col-8>
+                <ion-col col-9 (click)="detailItem(item)">
                   <h2 class="text-left">{{item.nome}}</h2>
                   <p class="text-left"> {{item.email}}</p>
                   <p class="text-left">{{item.nacionalidade}}</p>
                 </ion-col>
-              </ion-row>
-            </button>
 
-            <button col-2 class="button-list position-fixed tooltip">
-              <div class="tooltiptext">
-                <div class="tooltiptext" (click)="deleteItem(item)" class="button-delete">Excluir Registro</div>
-              </div>
-              <ion-row>
-                <p item-end *ngIf="item.data" class="data-position">{{item.data}}</p>
-              </ion-row>
-              <ion-row>
-                <ion-icon item-end name="more" class="more-position "></ion-icon>
+                <ion-col col-3>
+                  <ion-row>
+                    <p item-end *ngIf="item.data" class="data-position">{{item.data}}</p>
+                  </ion-row>
+                  <ion-row>
+                    <div class="tooltiptext">
+                      <div class="tooltiptext" (click)="deleteItem(item)" class="button-delete">Excluir Registro</div>
+                    </div>
+                    <ion-icon item-end name="more" class="more-position"></ion-icon>
+                  </ion-row>
+                </ion-col>
               </ion-row>
             </button>
 
@@ -75,6 +75,7 @@
 
     </ion-card-content>
   </ion-card>
+
 
   <ion-fab>
     <button ion-fab class="color-fab" (click)="addItem(item)">

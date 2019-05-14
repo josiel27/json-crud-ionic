@@ -40,8 +40,9 @@ page-user {
 
   //alinha a posição da opcao more a direita
   .more-position {
-    position: fixed;
-    right: 9px;
+    margin: auto !important;
+    margin-right: 0px !important;
+    margin-top: 20px !important;
     font-size: 20px;
     color: gray;
   }
@@ -58,13 +59,36 @@ page-user {
   }
 
   .data-position {
+    margin: auto !important;
     margin-right: 0px !important;
-    margin-left: auto !important;
   }
 
   //ajuster na divisão dos usuário na lista
-  .item-inner {
+  .border-item-bottom {
     border-bottom: 1px solid lightgray !important;
+    position: fixed;
+  }
+
+  .cursor-default {
+    cursor: default;
+  }
+
+  .group-size {
+    font-family: "Roboto-Regular" !important;
+    font-size: 20px;
+    color: gray;
+    position: fixed;
+    top: 40px;
+    left: 3%;
+  }
+
+  .button-group-size {
+    max-width: 80px !important;
+
+  }
+  .img-button-size {
+    max-width: 80px !important;
+
   }
 
   .div-menu {
@@ -106,11 +130,22 @@ page-user {
   height: 55px;
 }
 
+// .label-md {
+//   margin: 8px 8px 0px 0px;
+// }
+
+ion-item-group > .item-md {
+  padding-left: 0px;
+}
+ion-item-group > div > div > ion-row > .label-md {
+  margin: 8px 8px 0px 0px;
+}
+
 .tooltiptext {
   visibility: hidden;
   min-width: 140px;
   height: 55px;
-  top: 25px;
+  top: 15px;
   right: 15px;
   padding: 15px;
   border-radius: 4px;
@@ -123,7 +158,6 @@ page-user {
 }
 
 .tooltip:focus .tooltiptext {
-  // display: block;
   visibility: visible;
 }
 

@@ -42,7 +42,7 @@
         <ion-col col-md-12 col-sm-12 col-lg-12>
           <ion-item>
             <ion-label stacked>Nome Completo</ion-label>
-            <ion-input required name="nome" [(ngModel)]="user.nome"></ion-input>
+            <ion-input required name="nome" [(ngModel)]="user.nome" (keypress)="justLetters($event, $this);"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
