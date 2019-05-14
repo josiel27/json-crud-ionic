@@ -1,13 +1,11 @@
-# The Ionic Super Starter 🎮
 
+# Projeto Crud MaisVida
 
-## Table of Contents
+## Índice
 
 1. [Começando](#getting-started)
 2. [Testando o Projeto](#pages)
 
-
-# Projeto Crud MaisVida
 
 
 ## <a name="getting-started"></a>Começando
